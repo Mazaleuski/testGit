@@ -3,7 +3,6 @@ package by.teachmeskills.homeworks.hw_17022023;
 import java.util.Arrays;
 
 public class BubbleSort {
-
     public static void main(String[] args) {
 
         int[] array = new int[25];
