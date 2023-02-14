@@ -2,8 +2,7 @@ package by.teachmeskills.homeworks.hw_17022023;
 
 import java.util.Scanner;
 
-public class MultidimensionalArray {
-
+public class MultiDimensionalArray {
     public static void main(String[] args) {
 
         Scanner scanner = new Scanner(System.in);
