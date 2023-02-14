@@ -3,15 +3,16 @@ package by.teachmeskills.homeworks.hw_17022023;
 import java.util.Scanner;
 
 public class ClosingRectangle {
-
     public static void main(String[] args) {
 
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("Введите значение а, b и r:");
-        int a = scanner.nextInt();
-        int b = scanner.nextInt();
-        int r = scanner.nextInt();
-        scanner.close();
+        int a, b, r;
+
+        try (Scanner scanner = new Scanner(System.in);) {
+            System.out.println("Введите значение а, b и r:");
+            a = scanner.nextInt();
+            b = scanner.nextInt();
+            r = scanner.nextInt();
+        }
 
         if ((r * 2) * (r * 2) >= (a * a) + (b * b)) {
             System.out.println("Можно полностью закрыть.");
