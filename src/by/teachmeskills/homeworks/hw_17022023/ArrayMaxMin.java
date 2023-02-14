@@ -4,6 +4,7 @@ import java.util.Scanner;
 
 public class ArrayMaxMin {
     public static void main(String[] args) {
+
         double sum = 0;
         double multiplication = 1.0;
         int n;
