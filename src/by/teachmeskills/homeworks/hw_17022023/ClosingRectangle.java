@@ -4,6 +4,7 @@ import java.util.Scanner;
 
 public class ClosingRectangle {
     public static void main(String[] args) {
+
         int a, b, r;
 
         try (Scanner scanner = new Scanner(System.in);) {
