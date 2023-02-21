@@ -7,8 +7,12 @@ public class ExactPowerTwo {
     }
 
     static double recursion(double n) {
-        if (n == 1) return 1;
-        else if (n > 1 && n < 2) return 0;
-        else return recursion(n / 2);
+        if (n == 1) {
+            return 1;
+        } else if (n > 1 && n < 2) {
+            return 0;
+        } else {
+            return recursion(n / 2);
+        }
     }
 }
