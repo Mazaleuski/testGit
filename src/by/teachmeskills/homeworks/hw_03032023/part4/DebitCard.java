@@ -19,32 +19,32 @@ public class DebitCard {
 
     public void validateCard() {
         class Validator {
-            void validation() {
-                if (cardNumber.length() == 16) {
-                    if (isDebitCard) {
-                        if (cardOwner.length() > 0) {
-                            if (expirationDate.isAfter(LocalDate.now())) {
-                                if (cardVerificationValue.equals("123")) {
-                                    System.out.println("Карта валидна");
-                                } else {
-                                    System.out.println("Карта не валидна");
-                                }
-                            } else {
-                                System.out.println("Карта недействительна");
-                            }
-                        } else {
-                            System.out.println("Неверный владелец");
-                        }
-                    } else {
-                        System.out.println("Карта не дебетовая");
-                    }
-                } else {
-                    System.out.println("Слишком короткий номер карты");
-                }
+            void checkCardNumber() {
+                System.out.println(cardNumber.length() == 16 ? "Верный номер карты" : "Слишком короткий номер карты");
+            }
+
+            void checkValidity() {
+                System.out.println(expirationDate.isAfter(LocalDate.now()) ? "Карта действительна" : "Карта недействительна");
+            }
+
+            void checkCardOwner() {
+                System.out.println(cardOwner.length() > 0 ? "Верный владелец" : "Неверный владелец");
+            }
+
+            void checkCVV() {
+                System.out.println(cardVerificationValue.equals("123") ? "Верный CVV" : "Неверный CVV");
+            }
+
+            void checkDebitCard() {
+                System.out.println(isDebitCard ? "Карта дебетовая" : "Карта не дебетовая");
             }
         }
         Validator validator = new Validator();
-        validator.validation();
+        validator.checkValidity();
+        validator.checkCardNumber();
+        validator.checkCardOwner();
+        validator.checkDebitCard();
+        validator.checkCVV();
     }
 
     public static void main(String[] args) {

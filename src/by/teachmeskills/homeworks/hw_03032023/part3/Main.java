@@ -54,6 +54,7 @@ public class Main {
         while (true) {
             int i = scanner.nextInt();
             if (i == 5) {
+                scanner.close();
                 break;
             } else if (i > 5 || i < 0) {
                 System.out.println("Ошибка! Нет такой операции.");
@@ -125,9 +126,8 @@ public class Main {
                         String pictureName = scanner.next();
                         for (Animal value : animal) {
                             if (!(value == null) && (value.picture).equals(pictureName)) {
-                                value.getInfo();
+                                System.out.println(value);
                                 break;
-
                             } else System.out.println("Нет такого значения picture!");
                             break;
                         }

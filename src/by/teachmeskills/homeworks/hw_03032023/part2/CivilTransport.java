@@ -26,6 +26,10 @@ public class CivilTransport extends AirTransport {
         this.businessClass = businessClass;
     }
 
+    public void checkNumPassengers(int numPass) {
+        System.out.println(numPassengers >= numPass ? "Пассажиры на борту." : "Вам нужен самолет побольше.");
+    }
+
     @Override
     public String toString() {
         return "CivilTransport{" +
@@ -39,13 +43,5 @@ public class CivilTransport extends AirTransport {
                 ", weight=" + weight +
                 ", brand='" + brand + '\'' +
                 '}';
-    }
-
-    public void checkNumPassengers(int numPass) {
-        System.out.println(numPassengers >= numPass ? "Пассажиры на борту." : "Вам нужен самолет побольше.");
-    }
-
-    private double powerKiloWatts(int power) {
-        return 0.74 * power;
     }
 }

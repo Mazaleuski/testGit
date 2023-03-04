@@ -27,11 +27,22 @@ public class PassengerTransport extends GroundTransport {
         this.numPassengers = numPassengers;
     }
 
+    public void maxWay(int hours) {
+        way = hours * maxSpeed;
+        System.out.printf("За время %d часа, автомобиль %s, двигаясь с максимальной скоростью %d км/ч, " +
+                "проедет %.1f км и израсходует %.1f литров топлива.\n", hours, brand, maxSpeed, way, fuelCalculation());
+    }
+
+    private double fuelCalculation() {
+        return way / 100 * fuelConsumption;
+    }
+
     @Override
     public String toString() {
         return "PassengerTransport{" +
                 "bodyType='" + bodyType + '\'' +
                 ", numPassengers=" + numPassengers +
+                ", way=" + way +
                 ", numWheels=" + numWheels +
                 ", fuelConsumption=" + fuelConsumption +
                 ", power=" + power +
@@ -41,19 +52,4 @@ public class PassengerTransport extends GroundTransport {
                 ", brand='" + brand + '\'' +
                 '}';
     }
-
-    public void maxWay(int hours) {
-        way = hours * maxSpeed;
-        System.out.printf("За время %d часа, автомобиль %s, двигаясь с максимальной скоростью %d км/ч, " +
-                "проедет %.1f км и израсходует %.1f литров топлива.\n", hours, brand, maxSpeed, way, fuelCalculation());
-    }
-
-    private double powerKiloWatts(int power) {
-        return 0.74 * power;
-    }
-
-    private double fuelCalculation() {
-        return way / 100 * fuelConsumption;
-    }
-
 }

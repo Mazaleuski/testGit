@@ -12,4 +12,8 @@ public abstract class Transport {
         this.weight = weight;
         this.brand = brand;
     }
+
+    protected double powerKiloWatts(int power) {
+        return 0.74 * power;
+    }
 }

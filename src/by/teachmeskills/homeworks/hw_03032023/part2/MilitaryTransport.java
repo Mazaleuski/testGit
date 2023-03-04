@@ -26,6 +26,14 @@ public class MilitaryTransport extends AirTransport {
         this.numMissile = numMissile;
     }
 
+    public void shot() {
+        System.out.println(numMissile > 0 ? "Ракета пошла." : "Боеприпасы отсутствуют.");
+    }
+
+    public void checkEjection() {
+        System.out.println(ejection ? "Катапультирование прошло успешно." : "У Вас нет такой системы.");
+    }
+
     @Override
     public String toString() {
         return "MilitaryTransport{" +
@@ -39,17 +47,5 @@ public class MilitaryTransport extends AirTransport {
                 ", weight=" + weight +
                 ", brand='" + brand + '\'' +
                 '}';
-    }
-
-    public void shot() {
-        System.out.println(numMissile > 0 ? "Ракета пошла." : "Боеприпасы отсутствуют.");
-    }
-
-    public void checkEjection() {
-        System.out.println(ejection ? "Катапультирование прошло успешно." : "У Вас нет такой системы.");
-    }
-
-    private double powerKiloWatts(int power) {
-        return 0.74 * power;
     }
 }
