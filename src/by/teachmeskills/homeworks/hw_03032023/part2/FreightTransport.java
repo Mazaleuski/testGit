@@ -16,6 +16,10 @@ public class FreightTransport extends GroundTransport {
         this.loadCapacity = loadCapacity;
     }
 
+    public void checkLoadCapacity(int cargo) {
+        System.out.println(loadCapacity >= cargo ? "Грузовик загружен." : "Вам нужен грузовик побольше.");
+    }
+
     @Override
     public String toString() {
         return "FreightTransport{" +
@@ -28,13 +32,5 @@ public class FreightTransport extends GroundTransport {
                 ", weight=" + weight +
                 ", brand='" + brand + '\'' +
                 '}';
-    }
-
-    public void checkLoadCapacity(int cargo) {
-        System.out.println(loadCapacity >= cargo ? "Грузовик загружен." : "Вам нужен грузовик побольше.");
-    }
-
-    private double powerKiloWatts(int power) {
-        return 0.74 * power;
     }
 }

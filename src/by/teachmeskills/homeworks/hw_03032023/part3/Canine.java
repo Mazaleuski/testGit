@@ -5,5 +5,8 @@ public abstract class Canine extends Animal {
         super(picture, food, hungerLevel, boundaries, location);
     }
 
-    protected abstract void roam();
+    @Override
+    protected void roam() {
+        System.out.println("Canine lives in a flock...");
+    }
 }

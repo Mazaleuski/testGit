@@ -5,6 +5,8 @@ public abstract class Feline extends Animal {
         super(picture, food, hungerLevel, boundaries, location);
     }
 
-    protected abstract void roam();
-
+    @Override
+    protected void roam() {
+        System.out.println("Feline walks alone...");
+    }
 }

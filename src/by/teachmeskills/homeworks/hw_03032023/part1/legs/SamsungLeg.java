@@ -7,9 +7,6 @@ public class SamsungLeg implements ILeg {
         this.price = price;
     }
 
-    public SamsungLeg() {
-    }
-
     @Override
     public void step() {
         System.out.println("Нога Samsung делает шаг.");

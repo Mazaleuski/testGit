@@ -7,9 +7,6 @@ public class SamsungHand implements IHand {
         this.price = price;
     }
 
-    public SamsungHand() {
-    }
-
     @Override
     public void upHand() {
         System.out.println("Поднята рука Samsung.");

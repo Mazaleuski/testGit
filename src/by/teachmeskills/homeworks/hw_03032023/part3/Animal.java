@@ -91,10 +91,5 @@ public abstract class Animal {
         System.out.println("Animal is sleeping...");
     }
 
-    protected void roam() {
-        System.out.println("Animal is walking...");
-    }
-
-    protected abstract void getInfo();
-
+    protected abstract void roam();
 }

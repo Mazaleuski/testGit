@@ -17,16 +17,6 @@ public class Lion extends Feline {
     }
 
     @Override
-    protected void roam() {
-        System.out.println("Lion walks alone...");
-    }
-
-    @Override
-    protected void getInfo() {
-        System.out.println(this);
-    }
-
-    @Override
     public String toString() {
         return "Lion{" +
                 "picture='" + picture + '\'' +

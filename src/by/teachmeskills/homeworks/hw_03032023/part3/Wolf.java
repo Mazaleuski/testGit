@@ -16,16 +16,6 @@ public class Wolf extends Canine {
     }
 
     @Override
-    protected void roam() {
-        System.out.println("Wolf lives in a flock...");
-    }
-
-    @Override
-    protected void getInfo() {
-        System.out.println(this);
-    }
-
-    @Override
     public String toString() {
         return "Wolf{" +
                 "picture='" + picture + '\'' +

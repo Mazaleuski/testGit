@@ -16,8 +16,8 @@ public class Hippo extends Animal {
     }
 
     @Override
-    protected void getInfo() {
-        System.out.println(this);
+    protected void roam() {
+        System.out.println("Hippo walks...");
     }
 
     @Override

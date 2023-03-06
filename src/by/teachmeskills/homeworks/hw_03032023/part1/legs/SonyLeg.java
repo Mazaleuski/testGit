@@ -7,9 +7,6 @@ public class SonyLeg implements ILeg {
         this.price = price;
     }
 
-    public SonyLeg() {
-    }
-
     @Override
     public void step() {
         System.out.println("Нога Sony делает шаг.");
